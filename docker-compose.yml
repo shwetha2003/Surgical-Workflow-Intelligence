@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  surgical-analytics:
+    build: .
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
