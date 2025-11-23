@@ -3,25 +3,19 @@ name: CI
 on:
   push:
     branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
         
-    - name: Install dependencies
-      run: |
-        pip install pandas numpy scikit-learn plotly
+    - run: pip install pandas numpy scikit-learn plotly
         
-    - name: Run basic tests
-      run: |
-        python -c "import pandas; print('SUCCESS: All imports working')"
-        echo "CI pipeline completed successfully"
+    - run: python -c "import pandas; print('Build successful!')"
