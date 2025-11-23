@@ -1,0 +1,28 @@
+surgical-workflow-intelligence/
+|
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── setup.py
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+│   ├── 01_data_generation.ipynb
+│   ├── 02_exploratory_analysis.ipynb
+│   └── 03_ml_analysis.ipynb
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py
+│   ├── analyzer.py
+│   ├── visualizer.py
+│   └── utils.py
+├── dashboards/
+│   ├── plotly_dashboard.py
+│   └── assets/
+├── tests/
+│   ├── __init__.py
+│   ├── test_analyzer.py
+│   └── test_data_loader.py
+└── docs/
+    └── project_overview.md
