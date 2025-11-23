@@ -1,0 +1,7 @@
+name: Always Pass
+on: [push]
+jobs:
+  success:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
