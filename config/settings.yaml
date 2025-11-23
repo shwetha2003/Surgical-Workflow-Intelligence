@@ -1,0 +1,11 @@
+app:
+  name: "Surgical Workflow Intelligence"
+  version: "1.0.0"
+
+data:
+  sample_size: 500
+  generated_data_path: "data/raw/"
+  
+logging:
+  level: "INFO"
+  file: "surgical_analytics.log"
